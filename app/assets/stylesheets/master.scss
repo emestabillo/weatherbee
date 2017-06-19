@@ -1,1 +1,17 @@
 @import "bootstrap";
+
+.clear {
+  clear: both;
+}
+
+.header {
+  padding: 0 75px;
+}
+
+html { 
+  background: url(images/umbrella.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
