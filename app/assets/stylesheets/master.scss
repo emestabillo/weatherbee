@@ -6,7 +6,64 @@
 
 .header {
   padding: 0 75px;
+
 }
+
+.navbar-brand {
+  font-size: 40px;
+}
+
+.box {
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+}
+
+.searchTerm {
+  width: 50%; 
+  padding: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchButton {
+  position: relative;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  color: #7f7f7f;
+  
+}
+
+.hero {
+   background: image_url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 680px;
+}
+
+
 
 html { 
   background: url(images/umbrella.jpg) no-repeat center center fixed; 

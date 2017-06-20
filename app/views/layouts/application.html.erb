@@ -6,22 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/23b02ac1b7.js"></script>
+
+
   </head>
 
   <body>
-    <header class="row">
-      <div class="col-4">
-        <h1>WeatherBee</h1>
-      </div>
-      <div class="col-3">
-        LOGO
-      </div>
-      <div class="col-5">
-        Check the weather before heading out
-      </div>
-    </header>
-    
-    <br class="clear" />
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to 'WeatherBee', root_path, class: 'navbar-brand' %>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
     <%= yield %>
 
