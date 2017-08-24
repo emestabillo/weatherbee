@@ -56,6 +56,8 @@ gem 'popper_js', '~> 1.11.1'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
+gem 'forecast_io'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
