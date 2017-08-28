@@ -58,6 +58,10 @@ gem 'bootstrap', '~> 4.0.0.beta'
 
 gem 'forecast_io'
 
+gem 'geocoder'
+
+gem 'figaro'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
