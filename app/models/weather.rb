@@ -3,6 +3,8 @@ class Weather < ApplicationRecord
   after_validation :geocode
 
   def get_weather
-    ForecastIO.forecast(lat, lng)
+    ForecastIO.forecast(latitude, longitude)
   end
+
+  
 end
