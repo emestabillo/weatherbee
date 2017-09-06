@@ -1,5 +1,10 @@
 class WeatherController < ApplicationController
-  def show       
+  
+  def new
+    @weather = Weather.new
+  end
+
+  def show
     @weather = Weather.last
     @current_weather = @weather.get_weather.currently
   end
