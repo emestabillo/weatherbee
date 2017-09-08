@@ -2,13 +2,13 @@
   <h1>Do I need an umbrella today?</h1>
 
   <div class="box">
-    <div class="search">
-    <form action="weather/show" method="get">
-        <input type="text" class="searchTerm" placeholder="Your city or zipcode">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
-       </form>
-     </div>
+    
+    <%= form_tag("/weather/:id", method: "get") do %>
+      <%= text_field_tag(:address) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
+    </div>
   </div>
+
 </div>

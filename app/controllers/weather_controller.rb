@@ -1,17 +1,20 @@
 class WeatherController < ApplicationController
   
-  def new
-    @weather = Weather.new
-  end
-
   def show
     @weather = Weather.last
-    @current_weather = @weather.get_weather.currently
+    @weatherbee = @weather.get_weather
+    @current_weather = @weatherbee.currently
   end
 
   def create
-    Weather.create(weather_params)
-    redirect_to weather_path
+    puts 'Creating!'
+    @weather = Weather.new
+    @weather = Weather.create(weather_params)
+    if @weather.save
+      redirect_to weather_path
+    else
+      redirect_to root_path, alert: "Please enter valid address"
+    end
   end
 
   private
