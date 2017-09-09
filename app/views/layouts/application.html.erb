@@ -3,7 +3,7 @@
   <head>
     <title>Weatherbee</title>
     <%= csrf_meta_tags %>
-
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.fontawesome.com/23b02ac1b7.js"></script>
@@ -16,7 +16,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <%= link_to 'WeatherBee', root_path, class: 'navbar-brand' %>
+  <%= link_to 'Weather', root_path, class: 'navbar-brand' %>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">

@@ -6,5 +6,4 @@ class Weather < ApplicationRecord
     ForecastIO.forecast(latitude, longitude)
   end
 
-  
 end
