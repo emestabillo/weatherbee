@@ -1,5 +1,4 @@
 class WeathersController < ApplicationController
-
   def home
   end
   

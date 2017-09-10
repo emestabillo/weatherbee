@@ -2,7 +2,9 @@
   <h1>Do I need an umbrella today?</h1>
 
   <div class="box">
-    
-    <%= render "form" %>
-    </div>
+    <%= form_for(:weather, :url => {:action => 'create'}) do |f| %>
+      <%= f.text_field(:address, :class => 'form-control', placeholder: "Your city & state") %>
+      <%= submit_tag('Well do I?', :class=>'btn btn-success') %>
+    <%end %>
   </div>
+</div>
