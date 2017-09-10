@@ -1,46 +1,14 @@
 @import "bootstrap";
 
-.clear {
-  clear: both;
-}
-
-.header {
-  padding: 0 75px;
-
-}
-
 .navbar-brand {
   font-size: 40px;
+}
+.navbar {
+  background-color: white;
 }
 
 .box {
   text-align: center;
-}
-
-.search {
-  width: 100%;
-  position: relative;
-}
-
-.searchTerm {
-  width: 50%; 
-  padding: 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchButton {
-  position: relative;  
-  right: -50px;
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
 }
 
 h1 {
@@ -52,7 +20,20 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   color: #7f7f7f;
+  background-color: #F0DCD1
   
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: black;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding: 20px;
 }
 
 .hero {
@@ -62,4 +43,20 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 680px;
+}
+
+.conditions_header {
+  margin-bottom: 21px;
+  text-align: left;
+}
+
+.current_temp {
+  height: 110px;
+  line-height: 95px;
+  font-size: 105px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  text-indent: -3px;
+  text-rendering: optimizeLegibility;
+  text-align: left;
 }

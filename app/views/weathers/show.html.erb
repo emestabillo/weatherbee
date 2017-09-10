@@ -1,13 +1,17 @@
 
-Right now in <%= @weathers.address %>:
-<br/>
- <%= @current_weather.summary %>  
- <br/>
- <%= @current_weather.temperature.to_i %>
-<br>
-<%= link_to "Back", root_path %>
-
-<h1><%= @weathers.inspect %></h1>
+<div class="booyah-box col-10 offset-1">
+  <div class="conditions_header">
+    <%= @weathers.address %>
+    <br/>
+     Curently: <%= @current_weather.summary %>  
+     <br/>
+     <div class="current_temp"><%= @current_weather.temperature.to_i %>&#176;
+    <br>
+    </div>
+    
+  </div>
+  <%= link_to "Back", root_path %>
+</div>
 
 
 

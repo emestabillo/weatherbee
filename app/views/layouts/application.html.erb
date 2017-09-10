@@ -12,30 +12,19 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to 'WeathrNow', root_path, class: 'navbar-brand' %>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div id="flex-content-container">
+      <nav class="navbar navbar-light bg-faded">
+        <%= link_to 'WeatherBee', root_path, class: 'navbar-brand' %>
+      </nav>
 
     <%= yield %>
-
+    </div>
+    <div id="footer">
+      <div class="container">
+        <h4>Powered by Dark Sky</h4>
+        <br/>
+      </div>
+    </div>
   </body>
 </html>
 
-<div id="footer">
-      <div class="container">
-        <div class="row">
-          <h4>Powered by Dark Sky</h4>
-        </div>
-      </div>
-</div>
