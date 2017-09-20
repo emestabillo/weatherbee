@@ -1,17 +1,94 @@
+<div class="container">
+  <div class="row">
+    <div class="booyah-box col-10 offset-1">
+      <div class="conditions_header">
+        <%= @weathers.address %>
+        <br/>
+        Curently: <%= @current_weather.summary %>  
+        <br/>
+      </div>
 
-<div class="booyah-box col-10 offset-1">
-  <div class="conditions_header">
-    <%= @weathers.address %>
-    <br/>
-     Curently: <%= @current_weather.summary %>  
-     <br/>
-     <div class="current_temp"><%= @current_weather.temperature.to_i %>&#176;
-    <br>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="current_temp"><%= @current_weather.temperature.to_i %>&#176;
+          <%= @current_weather.icon %>
+          <p><canvas id=<%= @icon %> width="128" height="128"></canvas></p>
+          <canvas id="icon" width="128" height="128"></canvas>
+            <br>
+          </div>
+        </div>
+      
     </div>
-    
   </div>
-  <%= link_to "Back", root_path %>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="booyah-box col-10 offset-1">
+      <div class="details_header">
+        <span class="details">WEATHER DETAILS</span>
+      
+      <!-- ul buo
+      li row
+      div class isa
+      span class label and answer hiwalay -->
+      <div class="details_body">
+       <li>Feels Like: <%= @current_weather.apparentTemperature.to_i %> </li>
+       <li>Sunrise: <%= @today.timezone %></li>
+      </div>   
+    </div>
+  </div>
 </div>
+
+<figure class="icons">
+        <canvas id="clear-day" width="64" height="64">
+        </canvas>
+
+        <canvas id="clear-night" width="64" height="64">
+        </canvas>
+
+        <canvas id="partly-cloudy-day" width="64" height="64">
+        </canvas>
+
+        <canvas id="partly-cloudy-night" width="64" height="64">
+        </canvas>
+
+        <canvas id="cloudy" width="64" height="64">
+        </canvas>
+
+        <canvas id="rain" width="64" height="64">
+        </canvas>
+
+        <canvas id="sleet" width="64" height="64">
+        </canvas>
+
+        <canvas id="snow" width="64" height="64">
+        </canvas>
+
+        <canvas id="wind" width="64" height="64">
+        </canvas>
+
+        <canvas id="fog" width="64" height="64">
+        </canvas>
+      </figure>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+
+    <script>
+      var icons = new Skycons(),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+      for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+       
+      icons.play();
+    </script>
+
 
 
 
