@@ -7,7 +7,7 @@ class WeathersController < ApplicationController
     @weatherbee = @weathers.get_weather
     @current_weather = @weatherbee.currently
     @today = @weatherbee.daily
-
+    @icon = @current_weather.icon
   end
 
   def create

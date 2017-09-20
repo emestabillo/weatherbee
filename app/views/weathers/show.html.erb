@@ -5,22 +5,21 @@
         <%= @weathers.address %>
         <br/>
         Curently: <%= @current_weather.summary %>  
+        <%= @current_weather.icon %>
         <br/>
       </div>
 
       <div class="row">
         <div class="col-xs-6">
           <div class="current_temp"><%= @current_weather.temperature.to_i %>&#176;
-          <%= @current_weather.icon %>
-          <p><canvas id=<%= @icon %> width="128" height="128"></canvas></p>
-          <canvas id="icon" width="128" height="128"></canvas>
-            <br>
+            
+            <p><canvas id=<%= @icon %> width="128" height="128"></canvas></p>
+              <br>
           </div>
-        </div>
-      
+        </div>     
     </div>
   </div>
-  </div>
+</div>
 
 <div class="container">
   <div class="row">
@@ -28,51 +27,14 @@
       <div class="details_header">
         <span class="details">WEATHER DETAILS</span>
       
-      <!-- ul buo
-      li row
-      div class isa
-      span class label and answer hiwalay -->
       <div class="details_body">
        <li>Feels Like: <%= @current_weather.apparentTemperature.to_i %> </li>
        <li>Sunrise: <%= @today.timezone %></li>
+       <li>Sunset: <%= @today.timezone %></li>
       </div>   
     </div>
   </div>
 </div>
-
-<figure class="icons">
-        <canvas id="clear-day" width="64" height="64">
-        </canvas>
-
-        <canvas id="clear-night" width="64" height="64">
-        </canvas>
-
-        <canvas id="partly-cloudy-day" width="64" height="64">
-        </canvas>
-
-        <canvas id="partly-cloudy-night" width="64" height="64">
-        </canvas>
-
-        <canvas id="cloudy" width="64" height="64">
-        </canvas>
-
-        <canvas id="rain" width="64" height="64">
-        </canvas>
-
-        <canvas id="sleet" width="64" height="64">
-        </canvas>
-
-        <canvas id="snow" width="64" height="64">
-        </canvas>
-
-        <canvas id="wind" width="64" height="64">
-        </canvas>
-
-        <canvas id="fog" width="64" height="64">
-        </canvas>
-      </figure>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
 
     <script>
       var icons = new Skycons(),
