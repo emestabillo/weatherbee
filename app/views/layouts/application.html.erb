@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "skycons.js", "data-turbolinks-track" => true  %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c90e0f650d.js"></script>
   </head>
 
   <body>
@@ -19,12 +21,14 @@
     <%= yield %>
     
     </div>
+    
     <div id="footer">
       <div class="container">
-        <h4>Powered by Dark Sky</h4>
-        <br/>
+          <h5>Powered by Dark Sky</h5>
+          <h5>Em Estabillo <i class="fa fa-copyright" aria-hidden="true"></i>2017 </h5>
       </div>
     </div>
+
   </body>
 </html>
 
