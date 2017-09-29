@@ -1,46 +1,17 @@
 @import "bootstrap";
 
-.clear {
-  clear: both;
+body, html{
+  height:100%;
+  margin:0;
+  padding:0;
 }
 
-.header {
-  padding: 0 75px;
-
-}
 
 .navbar-brand {
   font-size: 40px;
 }
-
-.box {
-  text-align: center;
-}
-
-.search {
-  width: 100%;
-  position: relative;
-}
-
-.searchTerm {
-  width: 50%; 
-  padding: 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchButton {
-  position: relative;  
-  right: -50px;
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
+.navbar {
+  background-color: white;
 }
 
 h1 {
@@ -52,14 +23,82 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   color: #7f7f7f;
-  
+  /*background-color: #F0DCD1;*/
+  background: linear-gradient(180deg, #5184D9, #5B8CD4, #6B8FC6, #8AAACE, #B7CBD5, #E2E4D5, #FFEFB7, #FFEB59, #FF8F1C, #1F211C);
+  height: 100%;
 }
 
-.hero {
-   background: image_url('hero.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 680px;
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding: 40px;
 }
+
+.conditions_header { 
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.conditions {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.current_temp {
+  font-size: 120px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  text-indent: -3px;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  overflow: auto;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: -30px;
+  padding-top: 0px;
+}
+
+.skycons {
+  float: right;
+  padding-top: 20px;
+}
+
+.temp {
+  font-size: 1.5rem;
+  vertical-align: super;
+  margin-bottom: 16px;
+  margin-left: -20px;
+  position: relative;
+  top: 5px;
+  font-size: 50px;
+}
+
+.feels {
+  font-size: 24px;
+  padding-top: -30px;
+}
+
+.icon {
+  padding: 0;
+}
+
+.summary {
+  text-align: center;
+  padding: 30px;
+  line-height: 1em;
+}
+
+.details_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+

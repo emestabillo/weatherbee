@@ -1,10 +1,13 @@
-<div class="hero">
-  <h1>Do I need an umbrella today?</h1>
-
-  <div class="box">
+<br/>
+<br/>
+<div class="container">
+  <div class ="row">
+    <h1 class="text-center">What's it like outside today?</h1>
+  </div>
+  <div>
     <%= form_for(:weather, :url => {:action => 'create'}) do |f| %>
       <%= f.text_field(:address, :class => 'form-control', placeholder: "Your city & state") %>
-      <%= submit_tag('Well do I?', :class=>'btn btn-success') %>
+      <%= submit_tag("Let's find out", :class=>'btn btn-primary') %>
     <%end %>
-  </div>
+  </div>  
 </div>

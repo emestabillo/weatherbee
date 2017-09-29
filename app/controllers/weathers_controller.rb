@@ -6,6 +6,10 @@ class WeathersController < ApplicationController
     @weathers = Weather.find(params[:id])
     @weatherbee = @weathers.get_weather
     @current_weather = @weatherbee.currently
+    @today = @weatherbee.daily
+    @icon = @current_weather.icon
+    @daily_weather = @weatherbee.daily.data.first(5)
+    @daily_icon = @weatherbee.daily.icon
   end
 
   def create

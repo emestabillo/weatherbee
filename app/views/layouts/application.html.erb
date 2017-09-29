@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Weatherbee</title>
     <%= csrf_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://use.fontawesome.com/23b02ac1b7.js"></script>
-
-
+    <%= javascript_include_tag "skycons.js", "data-turbolinks-track" => true  %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c90e0f650d.js"></script>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to 'WeathrNow', root_path, class: 'navbar-brand' %>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div id="flex-content-container">
+      <nav class="navbar navbar-light bg-faded">
+        <%= link_to 'WeathrNow', root_path, class: 'navbar-brand' %>
+      </nav>
 
     <%= yield %>
+    
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+          <h5>Powered by Dark Sky</h5>
+          <h5>Em Estabillo <i class="fa fa-copyright" aria-hidden="true"></i>2017 </h5>
+      </div>
+    </div>
 
   </body>
 </html>
 
-<div id="footer">
-      <div class="container">
-        <div class="row">
-          <h4>Powered by Dark Sky</h4>
-        </div>
-      </div>
-</div>
