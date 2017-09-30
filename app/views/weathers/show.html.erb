@@ -1,51 +1,63 @@
+<br/>
 <div class="container">
   <div class="row">
     <div class="booyah-box col-10 offset-1">
       <div class="conditions_header">
+        <div class="date">
+          <%= Time.now.strftime('%A %B %e') %> 
+        </div>
         <i class="fa fa-map-marker"></i> <%= @weathers.address.upcase %>
-        <br/>
         <br/>
       </div>
 
       <div class="row conditions">
         <div>
           <div class="current_temp"><%= @current_weather.temperature.to_i %>
-            <span class="temp">&#176; F </span>
-            <br>
-            </div>
+            <span class="degreesf">&#176; F </span>
+            <br />
+          </div>
             
-            <div class="feels">Feels Like: <%= @current_weather.apparentTemperature.to_i %>&#176; </div>
-          
+          <div class="feels">Feels Like: <%= @current_weather.apparentTemperature.to_i %>&#176; </div>
         </div>
         
-          <div class="skycons">
-            <span class="icon"><canvas id=<%= @icon %> width="120" height="120"></canvas></span>
-            <br>
-            <span class="summary"><%= @current_weather.summary %></span>
-            <br>
-          </div>
-           
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="booyah-box col-10 offset-1">
+        <div class="skycons">
+          <div class="main_icon"><canvas id=<%= @icon %> width="125" height="125"></canvas></div>
+          <div class="summary"><%= @current_weather.summary %></div>
+          <br />
+        </div>
+      </div>  
       
-        <div class="details">5-DAY FORECAST</div>
-          <div class="details_body">
-            <% @daily_weather.each do |day| %>
-            <%= Time.at(day.time).strftime('%a') %> :        
-            <%= day.summary %>
-            <br>
-            <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
-          
+      <div class ="row">
+        <div class="today">
+          <%= @weatherbee.hourly.summary %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="forecast">
+        5-DAY FORECAST
+        </div>
+      </div>
+      <div class="row">
+        <div class="details_body">
+          <% @daily_weather.each do |day| %>
+            <div class="daily">
+              <%= Time.at(day.time).strftime('%a') %> 
+              <br />
+              <span class="icon"><canvas id=<%= day.icon %> width="40" height="40"></canvas></span>
+              <br>
+              <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
+            </div>
             <br/>
           <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
   var icons = new Skycons(),
