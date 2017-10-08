@@ -21,7 +21,7 @@
         </div>
         
         <div class="skycons">
-          <div class="main_icon"><canvas id=<%= @icon %> width="125" height="125"></canvas></div>
+          <div class="main_icon"><canvas class=<%= @icon %> width="125" height="125"></canvas></div>
           <div class="summary"><%= @current_weather.summary %></div>
           <br />
         </div>
@@ -41,12 +41,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="details_body">
+        <div class="details_body"> 
           <% @daily_weather.each do |day| %>
             <div class="daily">
               <%= Time.at(day.time).strftime('%a') %> 
               <br />
-              <span class="icon"><canvas id=<%= day.icon %> width="40" height="40"></canvas></span>
+              <span class="icon"><canvas class=<%= day.icon %> width="40" height="40"></canvas></span>
               <br>
               <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
             </div>
@@ -58,7 +58,6 @@
   </div>
 </div>
 
-
 <script>
   var icons = new Skycons(),
       list  = [
@@ -68,8 +67,13 @@
       ],
       i;
 
-  for(i = list.length; i--; )
-    icons.set(list[i], list[i]);
+  for(i = list.length; i--; ) {
+    var weatherType = list[i],
+        elements = document.getElementsByClassName( weatherType );
+    for (e = elements.length; e--;){
+        icons.set( elements[e], weatherType );
+    }
+  }
    
   icons.play();
 </script>

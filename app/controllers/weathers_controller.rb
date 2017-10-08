@@ -7,7 +7,7 @@ class WeathersController < ApplicationController
     @weatherbee = @weathers.get_weather
     @current_weather = @weatherbee.currently
     @icon = @current_weather.icon
-    @daily_weather = @weatherbee.daily.data.first(5)
+    @daily_weather = @weatherbee.daily.data[1, 5]
   end
 
   def create
