@@ -2,7 +2,8 @@
 
 Weather forecaster using data from the [Dark Sky API](http://darkskyapp.com/api/) to request current or historical global weather conditions.
 
-<img src="images/screenshot.png">
+![screenshot](app/assets/images/screenshot.png)
+
 ---
 
 ## Installation
