@@ -1,24 +1,37 @@
-# README
+# WeatherBee
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Weather forecaster using data from the [Dark Sky API](http://darkskyapp.com/api/) to request current or historical global weather conditions.
 
-Things you may want to cover:
+<img src="images/screenshot.png">
+---
 
-* Ruby version
+## Installation
 
-* System dependencies
+Add these lines to your application's Gemfile:
+```
+  gem 'forecast_io'
 
-* Configuration
+  gem 'geocoder'
+```
 
-* Database creation
 
-* Database initialization
+And then execute:
+```ruby
+$ bundle install
+```
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
+1. Fork it ( https://github.com/emestabillo/weatherbee/fork )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
 
-* ...
+---
+
+## License and Copyright
+
+Copyright (c) 2017 Em Estabillo
