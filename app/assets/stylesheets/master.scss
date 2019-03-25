@@ -162,6 +162,13 @@ hr {
   }
 }
 
+@media (min-width: 768px) {
+  .weekdays {
+    width: 20%;
+    margin-bottom: 30px;
+  }
+}
+
 .copyright {
   margin: auto;
   letter-spacing: 2px;
