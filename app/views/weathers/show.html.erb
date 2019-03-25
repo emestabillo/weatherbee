@@ -35,22 +35,29 @@
 
       <hr>
 
-  
-      <div class="forecast-title">
-        <h2>5-DAY FORECAST</h2>
-      </div>
-
-    <%# DAILY FORECAST SECTION %>
-      <div class="forecast_details"> 
-        <% @daily_weather.each do |day| %>
-          <div class="weekdays">
-            <%= Time.at(day.time).strftime('%a') %>            
-            <span class="icon"><canvas class=<%= day.icon %> width="40" height="40"></canvas></span>           
-            <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
-          </div>
-        <% end %>
+      <div class="row">
+        <div class="forecast">
+        5-DAY FORECAST
         </div>
-      </div>   
+      </div>
+      <div class="row">
+        <div class="details_body"> 
+          <div class="section group">
+            <% @daily_weather.each do |day| %>
+              <div class="col span_1_of_5">
+                <div class="daily">
+                  <%= Time.at(day.time).strftime('%a') %> 
+                  <br />
+                  <span class="icon"><canvas class=<%= day.icon %> width="40" height="40"></canvas></span>
+                  <br>
+                  <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
+                </div>
+                <br/>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
