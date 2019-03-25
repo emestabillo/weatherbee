@@ -35,9 +35,10 @@
 
       <hr>
 
-  
-      <div class="forecast-title">
-        <h2>5-DAY FORECAST</h2>
+      <div class="row">
+        <div class="forecast">
+        5-DAY FORECAST
+        </div>
       </div>
 
       <div class="forecast_details"> 
@@ -47,9 +48,8 @@
             <span class="icon"><canvas class=<%= day.icon %> width="40" height="40"></canvas></span>           
             <%= day.apparentTemperatureMax.to_i %>&#176; | <%= day.apparentTemperatureMin.to_i %>&#176;
           </div>
-        <% end %>
         </div>
-      </div>   
+      </div>
     </div>
   </div>
 </div>
